@@ -4,8 +4,7 @@ import "dotenv/config";
 import connectDB from "./configs/db.js";
 
 
-console.log("Starting server..."); 
-
+app.use('/api/users',userRouter);
 await connectDB();
 const app = express();
 const PORT = process.env.PORT || 3000;
