@@ -4,3 +4,6 @@ node_modules/
 # Env
 .env
 server/.env
+
+.env
+server/.env
