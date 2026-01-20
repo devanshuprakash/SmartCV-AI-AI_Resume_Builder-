@@ -40,8 +40,8 @@ const Dashboard = () => {
 //     prev.map(resume =>
 //       resume._id === editResumeId
 //         ? { ...resume, title, updatedAt: new Date() }
-//         : resume
-//     )
+//         : resume 
+//    )
 //   );
 
 //   setEditResumeId('');
@@ -224,8 +224,7 @@ onChange={(e)=>setResume(e.target.files[0])}/>
            {editResumeId && (
   <form
     onSubmit={editTitle}
-    onClick={() =>  {setEditResumeId('');
-    setTitle('')}}
+    onClick={() =>  {setEditResumeId('')}}
     className="fixed inset-0 bg-black/70 backdrop-blur bg-opacity-50 z-10
     flex items-center justify-center"
   >
