@@ -12,7 +12,7 @@ import EducationForm from '../components/EducationForm'
 import ProjectForm from '../components/ProjectForm'
 import SkillsForm from '../components/SkillsForm'
 import { useSelector } from 'react-redux'
-import ai from '../configs/ai'
+import ai from '../configs/api'
 import toast from 'react-hot-toast'
 
 const ResumeBuilder = () => {
