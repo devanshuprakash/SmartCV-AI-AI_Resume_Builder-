@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CalltoAction = () => {
   return (
@@ -7,11 +8,11 @@ const CalltoAction = () => {
                 <p className="text-xl font-medium max-w-md text-slate-800">Build a Professional Resume That Helps You
                     Stand Out and get Hired
             </p>
-                <a href="https://prebuiltui.com" className="flex items-center gap-2 rounded 
+                <div className="flex items-center gap-2 rounded 
                 py-3 px-8 bg-green-600 hover:bg-green-700 transition text-white">
-                    <span>Star On Github</span>
+                    <Link to='/app'>Get Started</Link>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                </a>
+                </div>
             </div>
         </div>
   )

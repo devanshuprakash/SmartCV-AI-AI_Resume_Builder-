@@ -44,18 +44,18 @@ const Testimonial = () => {
                     <span className="text-xs text-slate-500">{card.handle}</span>
                 </div>
             </div>
-            <p className="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+            <p className="text-sm py-4 text-gray-800">This AI resume builder made the entire process effortless. My resume looks polished, ATS-friendly, and got me interview calls within days.</p>
         </div>
     );
 
   return (
     <>
-    <div id='features' className='flex flex-col items-center my-10 scroll-mt-12'>
+    <div id="testimonials" className='flex flex-col items-center my-10 scroll-mt-12'>
          <div className="flex items-center gap-2 text-sm text-green-800 bg-green-400/10 rounded-full px-6 py-1.5">
             <BookUserIcon className='size-4.5 stroke-green-600'/>
             <span>Testimonial</span>
         </div>
-        <Title title="Don't just take our word for it" description='Discover how BuildMyCV has helped thousands of users create professional 
+        <Title title="Don't just take our word for it" description='Discover how SmartV has helped thousands of users create professional 
          resumes with ease. Real stories from real people who landed their dream jobs. If you have a positive experience with BuildMyCV, we want to hear from you!'/>
     </div>
 
