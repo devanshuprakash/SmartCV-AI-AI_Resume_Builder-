@@ -1,18 +1,17 @@
-import jwt from "jsonwebtoken";
-import "dotenv/config";
+import jwt from 'jsonwebtoken'
 
-const protect = async(req, res, next) => {
+const protect = async (req, res, next) => {
     const token = req.headers.authorization;
-    if (!token) {
-        return res.status(401).json({ message: "No token provided, authorization denied" });
+    if(!token){
+        return res.status(401).json({ message: 'Unauthorized' });
     }
-    try{
-        const decoeded = jwt.verify(token, process.env.JWT_SECRET);
-        req.userId = decoeded.id;
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+        req.userId = decoded.userId;
         next();
-    }catch(error){
-        return res.status(401).json({ message: "Token is not valid" });
+    } catch (error) {
+        return res.status(401).json({ message: 'Unauthorized' });
     }
-};
+}
 
 export default protect;
