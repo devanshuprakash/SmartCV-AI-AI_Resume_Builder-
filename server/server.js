@@ -8,17 +8,16 @@ import aiRouter from "./routes/aiRoutes.js";
 
 const app = express();
 
-/* 🔴 CORS MUST COME FIRST */
+ 
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true
 }));
 
-/* 🔴 BODY PARSERS */
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-/* 🔴 ROUTES */
 app.use('/api/users', userRouter);
 app.use('/api/resumes', resumeRouter);
 app.use('/api/ai', aiRouter);
