@@ -1,12 +1,14 @@
-import express from 'express';
-import { getUserById, loginUser, registerUser ,getUserResumes} from '../controllers/userControllers.js';
-import protect from '../middlewares/authMiddleware.js';
+import express from "express";
+import protect from "../middlewares/authMiddleware.js";
+import { createResume, deleteResume, getPublicResumeById, getResumeById, updateResume } from "../controllers/resumeController.js";
+import upload from "../configs/multer.js";
 
+const resumeRouter = express.Router();
 
-const userRouter = express.Router();
+resumeRouter.post('/create', protect, createResume);
+resumeRouter.put('/update', upload.single('image'), protect, updateResume);
+resumeRouter.delete('/delete/:resumeId', protect, deleteResume);
+resumeRouter.get('/get/:resumeId', protect, getResumeById);
+resumeRouter.get('/public/:resumeId', getPublicResumeById);
 
-userRouter.post('/register',registerUser);
-userRouter.post('/login',loginUser);
-userRouter.get('/data',protect,getUserById);
-userRouter.get('/resumes',protect,getUserResumes);
-export default userRouter;
+export default resumeRouter
