@@ -10,7 +10,7 @@ const app = express();
 
  
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://smartcv-ai-ai-resume-builder.onrender.com/",
   credentials: true
 }));
 
