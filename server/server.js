@@ -37,12 +37,13 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/* SERVE REACT BUILD */
+/* serve frontend */
 app.use(express.static(path.join(__dirname, "dist")));
 
-app.get("*", (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
+
 
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
